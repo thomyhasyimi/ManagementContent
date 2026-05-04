@@ -2,9 +2,8 @@
 session_start();
 
 $VALID_TOKENS = [
-    'marketing-abc' => 'Marketing',
-    'hr-123' => 'HR',
-    'it-xyz' => 'IT',
+    'adm-456' => 'Admin',
+    'us-123' => 'User',
 ];
 
 function login_with_token(string $token): bool
@@ -33,7 +32,11 @@ if (isset($_GET['logout'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
     if (login_with_token($_POST['token'])) {
-        header('Location: menu.php');
+        if ($_SESSION['division'] === 'Admin') {
+            header('Location: https://docs.google.com/spreadsheets/d/1Zdkh5O7gGKawPoQG2azLaJxjzssnUuMslGa96IqQxJM/edit?hl=id&gid=0#gid=0');
+        } else {
+            header('Location: menu.php');
+        }
         exit;
     }
 

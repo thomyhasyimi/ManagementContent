@@ -30,7 +30,7 @@ $userDivision = get_user_division();
         <div class="flex items-center justify-between mb-6">
             <div>
                 <h2 class="text-3xl font-bold text-gray-800">Pilih Menu</h2>
-                <p class="text-sm text-gray-600">Login sebagai divisi: <?= htmlspecialchars($userDivision) ?></p>
+                <p class="text-sm text-gray-600">Login sebagai : <?= htmlspecialchars($userDivision) ?></p>
             </div>
             <a href="login.php?logout=1" class="text-sm text-blue-600 hover:underline">Logout</a>
         </div>
@@ -40,21 +40,13 @@ $userDivision = get_user_division();
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Input Konten</h3>
                 <p class="text-sm text-gray-600">Masukkan data konten untuk divisi Anda.</p>
             </a>
-            <a href="report.php" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Laporan Divisi</h3>
-                <p class="text-sm text-gray-600">Akses laporan khusus divisi dan ringkasan hasil.</p>
-            </a>
-            <a href="settings.php" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Pengaturan Divisi</h3>
-                <p class="text-sm text-gray-600">Kelola pengaturan dan preferensi divisi Anda.</p>
-            </a>
             <a href="https://drive.google.com/drive/folders/1panCqRuwM6J3JJkNlhpH-aIH0OH_N7gN" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Bahan Edit</h3>
-                <p class="text-sm text-gray-600">Kelola pengaturan dan preferensi divisi Anda.</p>
+                <p class="text-sm text-gray-600">Akses bahan edit untuk divisi Anda.</p>
             </a>
-            <a href="settings.php" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Ready Upload</h3>
-                <p class="text-sm text-gray-600">Kelola pengaturan dan preferensi divisi Anda.</p>
+            <a href="https://drive.google.com/drive/folders/1cpKfNeKTVE-l6EcKVc7i3KTTMS0w6NDq?usp=drive_link" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Ready to Upload</h3>
+                <p class="text-sm text-gray-600">Akses file yang siap diunggah untuk divisi Anda.</p>
             </a>
         </div>
     </div>
