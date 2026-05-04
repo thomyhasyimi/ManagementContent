@@ -54,15 +54,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bulan'], $_POST['mingg
 </head>
 <body class="min-h-screen bg-gray-100 p-4">
 
-<a href="menu.php" class="mt-4 inline-block text-blue-600 hover:underline">Kembali ke Menu</a>
 
 <div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
     <div class="w-full max-w-2xl">
         <div class="bg-white rounded-xl shadow-lg p-8">
+            <a href="menu.php" class="mt-4 inline-block text-blue-600 hover:underline">Kembali ke Menu</a>
             <div class="flex items-center justify-between mb-6">
+                
                 <div>
                     <h2 class="text-3xl font-bold text-gray-800">Input Konten</h2>
-                    <p class="text-sm text-gray-600">Login sebagai divisi: <?= htmlspecialchars(get_user_division()) ?></p>
+                    <p class="text-sm text-gray-600">Login sebagai : <?= htmlspecialchars(get_user_division()) ?></p>
                 </div>
                 <a href="login.php?logout=1" class="text-sm text-blue-600 hover:underline">Logout</a>
             </div>

@@ -38,15 +38,15 @@ $userDivision = get_user_division();
         <div class="grid gap-6 sm:grid-cols-3">
             <a href="input_konten.php" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Input Konten</h3>
-                <p class="text-sm text-gray-600">Masukkan data konten untuk divisi Anda.</p>
+                <p class="text-sm text-gray-600">Masukkan data konten untuk keperluan Anda.</p>
             </a>
             <a href="https://drive.google.com/drive/folders/1panCqRuwM6J3JJkNlhpH-aIH0OH_N7gN" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Bahan Edit</h3>
-                <p class="text-sm text-gray-600">Akses bahan edit untuk divisi Anda.</p>
+                <p class="text-sm text-gray-600">Akses bahan edit untuk keperluan Anda.</p>
             </a>
             <a href="https://drive.google.com/drive/folders/1cpKfNeKTVE-l6EcKVc7i3KTTMS0w6NDq?usp=drive_link" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Ready to Upload</h3>
-                <p class="text-sm text-gray-600">Akses file yang siap diunggah untuk divisi Anda.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Siap Diposting</h3>
+                <p class="text-sm text-gray-600">Akses file yang siap diposting untuk keperluan Anda.</p>
             </a>
         </div>
     </div>
