@@ -24,11 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bulan'], $_POST['mingg
         "bulan" => $_POST['bulan'],
         "minggu" => $_POST['minggu'],
         "jenis" => $_POST['jenis'],
-        "isi" => $_POST['isi']
+        "isi" => $_POST['isi'],
+        "status" => "Belum Progres",
+        "divisi" => get_user_division()
     ];
 
     $jsonData = json_encode($data);
-    $url = "https://script.google.com/macros/s/AKfycbwlkE1-dFCQeQsiCTKk3ha5SUjxtu34UUogW-eIZ-3LcuGV2whOzKg0qVW0i2jSkfSt/exec";
+    $url = "https://script.google.com/macros/s/AKfycbxwqvHb1WvQU2JFtx4UuqjaexnrNqvnTMaJ59oqe9Ym580rcRFQlxBwqGJ1kpDrcBzT/exec";
 
     $options = [
         'http' => [
@@ -40,6 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bulan'], $_POST['mingg
 
     $context = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
+
+    $jsonFile = 'data.json';
+    $currentData = [];
+    if (file_exists($jsonFile)) {
+        $currentData = json_decode(file_get_contents($jsonFile), true) ?? [];
+    }
+    $currentData[] = $data;
+    file_put_contents($jsonFile, json_encode($currentData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), LOCK_EX);
 
     $success = true;
     $submittedData = $data;
@@ -133,6 +143,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bulan'], $_POST['mingg
                     <tr class="bg-gray-50 border-b border-gray-200">
                         <td class="px-4 py-3 font-semibold">Jenis Konten</td>
                         <td class="px-4 py-3"><?= htmlspecialchars($submittedData['jenis']) ?></td>
+                    </tr>
+                    <tr class="border-b border-gray-200">
+                        <td class="px-4 py-3 font-semibold">Status Konten</td>
+                        <td class="px-4 py-3"><?= htmlspecialchars($submittedData['status']) ?></td>
                     </tr>
                     <tr>
                         <td class="px-4 py-3 font-semibold align-top">Isi Konten</td>

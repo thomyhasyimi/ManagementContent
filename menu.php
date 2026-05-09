@@ -40,10 +40,15 @@ $userDivision = get_user_division();
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Input Konten</h3>
                 <p class="text-sm text-gray-600">Masukkan data konten untuk keperluan Anda.</p>
             </a>
-            <a href="https://drive.google.com/drive/folders/1panCqRuwM6J3JJkNlhpH-aIH0OH_N7gN" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+            <a href="bahan_edit.php" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Bahan Edit</h3>
-                <p class="text-sm text-gray-600">Akses bahan edit untuk keperluan Anda.</p>
+                <p class="text-sm text-gray-600">Ambil data bahan dan tandai statusnya di sini.</p>
             </a>
+            <a href="upload_media.php" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Upload Media</h3>
+                <p class="text-sm text-gray-600">Unggah foto atau video dan arahkan ke folder Google Drive per bulan/minggu.</p>
+            </a>
+
             <a href="https://drive.google.com/drive/folders/1cpKfNeKTVE-l6EcKVc7i3KTTMS0w6NDq?usp=drive_link" class="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Siap Diposting</h3>
                 <p class="text-sm text-gray-600">Akses file yang siap diposting untuk keperluan Anda.</p>
