@@ -82,6 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'image/png',
             'image/gif',
             'video/mp4',
+            'video/mov',
             'video/quicktime',
             'video/x-msvideo',
             'video/x-matroska'
